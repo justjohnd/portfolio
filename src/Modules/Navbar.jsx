@@ -2,6 +2,7 @@ const Navbar = () => {
 
   return (
           <header className="header">
+            
       </header>
   )
 };

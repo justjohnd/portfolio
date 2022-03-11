@@ -73,10 +73,6 @@ a {
   color: $color-primary;
 }
 
-.navbar nav {
-  display: flex;
-}
-
 .navbar-logo {
   display: grid;
   place-content: center;
@@ -116,14 +112,14 @@ a {
     align-items: center;
   }
 
-  .navbar nav {
+  .nav-wrapper {
     //This is the hamburger menu when revealed
     position: fixed;
     top: 0;
     bottom: 0;
     width: 100vw;
     right: 0rem;
-    display: block;
+    text-align: center;
     background: $gradient;
     padding-top: calc($nav-height * 2);
     // Hide the menu in a circle behind the nav bars
@@ -152,20 +148,21 @@ a {
     transition: transform 250ms ease-out;
   }
 
-  #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(1) {
+  .bar.barChecked:nth-child(1) {
     transform: translate(0, calc($size / 2 - $bar-height / 2)) rotate(225deg);
   }
 
-  #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(2) {
+  .bar.barChecked:nth-child(2) {
     transform: scaleX(0);
   }
 
-  #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(3) {
+  .bar.barChecked:nth-child(3) {
     transform: translate(0, calc(-1 * $size / 2 + $bar-height / 2))
       rotate(135deg);
   }
 
-  #nav-toggle:checked + * + nav {
+  //This reveals the background
+  .nav-wrapper.navChecked {
     clip-path: circle(150vmax at 100% 0%);
 
     background: $gradient;

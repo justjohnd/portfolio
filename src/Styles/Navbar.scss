@@ -1,0 +1,184 @@
+$gradient: linear-gradient(87deg, #03a9f4, #03a9f475),
+  linear-gradient(308deg, #0e3b50, #0e3b5000),
+  linear-gradient(273deg, #03a9f4, #03a9f475);
+
+$nav-height: 3rem;
+$size: calc($nav-height / 3);
+$bar-height: 2px;
+$transition: 250ms ease-out;
+$transition-long: 500ms ease-out;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: $nav-height;
+  margin-bottom: $ymargin-btm;
+  padding: 0 $xpadding;
+  font-size: 1.5rem;
+  background-color: $color-light;
+  color: $color-primary;
+  box-shadow: -2px 2px 8px 0px $color-primary-light;
+  border-bottom: 1px solid $divider-color;
+  z-index: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: $color-light;
+}
+
+.navbar a:hover {
+  color: $color-primary-dark;
+}
+
+.navbar a,
+.navbar a.navbar-logo {
+  color: $color-primary-dark;
+}
+
+.navbar a:hover,
+.navbar a.navbar-logo:hover {
+  color: $color-primary;
+}
+
+.navbar-logo {
+  display: grid;
+  place-content: center;
+  padding: 0 1rem;
+  font-weight: 500;
+}
+
+.logo-j,
+.logo-D {
+  display: inline;
+  font-weight: 700;
+  width: 100%;
+}
+
+.logo-j {
+  vertical-align: 6px;
+}
+
+.logo-D {
+  vertical-align: -6px;
+}
+
+.navbar-nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  padding: 0rem 1.5rem;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navbar-nav-item {
+  display: grid;
+  padding: 0.5rem;
+}
+
+#nav-toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+#home-link {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $xpadding-sm;
+  }
+
+  .navbar a {
+    color: $color-light;
+  }
+
+  .navbar a:hover {
+    color: $color-primary-dark;
+  }
+
+  .nav-wrapper {
+    //This is the hamburger menu when revealed
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    right: 0rem;
+    text-align: center;
+    background: $gradient;
+    padding-top: calc($nav-height * 2);
+    // Hide the menu in a circle behind the nav bars
+    clip-path: circle(0 at calc(100% - 1.5rem) calc(0% + $nav-height / 2));
+    transition: clip-path $transition-long, background $transition-long;
+  }
+
+  #nav-toggle-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: auto;
+    width: $size;
+    height: $size;
+    z-index: 2;
+  }
+
+  .bar {
+    display: inline-block;
+    height: $bar-height;
+    width: 100%;
+    background-color: $color-primary-dark;
+    transition: transform 250ms ease-out;
+  }
+
+  .bar.checked:nth-child(1) {
+    transform: translate(0, calc($size / 2 - $bar-height / 2)) rotate(225deg);
+  }
+
+  .bar.checked:nth-child(2) {
+    transform: scaleX(0);
+  }
+
+  .bar.checked:nth-child(3) {
+    transform: translate(0, calc(-1 * $size / 2 + $bar-height / 2))
+      rotate(135deg);
+  }
+
+  //This reveals the background
+  .nav-wrapper.checked {
+    clip-path: circle(150vmax at 100% 0%);
+
+    background: $gradient;
+  }
+
+  .navbar-nav {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: max-content;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  a.navbar-nav-item {
+    place-content: flex-center;
+  }
+
+  #home-link {
+    display: block;
+  }
+}

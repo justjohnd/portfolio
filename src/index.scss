@@ -17,15 +17,10 @@ $color-dark-blue: #0288d1;
 $font-primary: "Poppins", sans-serif;
 $font-secondary: "Open Sans", sans-serif;
 
-$gradient: linear-gradient(300deg, $color-primary, rgba(186, 74, 255, 0) 70%),
-  linear-gradient(227deg, $color-primary-light, rgba(0, 138, 255, 0) 70%),
-  linear-gradient(104deg, $color-primary, rgba(0, 255, 198, 0) 74%);
+$xpadding: 5rem;
+$xpadding-sm: 1rem;
 
-$nav-height: 3rem;
-$size: calc($nav-height / 3);
-$bar-height: 2px;
-$transition: 250ms ease-out;
-$transition-long: 500ms ease-out;
+$ymargin-btm: 7rem;
 
 body {
   margin: 0;
@@ -41,144 +36,37 @@ h3,
 h4,
 h5 {
   font-family: $font-secondary;
+  color: $color-primary-dark;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $nav-height;
-  font-size: 1.5rem;
-  background-color: $color-light;
-  color: $color-primary;
-  box-shadow: -2px 2px 8px 0px $color-primary-light;
-  border-bottom: 1px solid $divider-color;
-  z-index: 1;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  justify-content: space-between;
+.section {
+  margin-bottom: $ymargin-btm;
 }
 
-.navbar a {
-  color: $color-primary-dark;
+.section h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-.navbar a:hover {
-  color: $color-primary;
+.page-wrapper {
+  padding: 0 $xpadding-sm;
+  margin: 0 auto;
 }
 
-.navbar-logo {
-  display: grid;
-  place-content: center;
-  padding: 0 1rem;
-  font-weight: 500;
-}
-
-.navbar-nav {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  grid-template-rows: 1fr;
-  gap: 0.5rem;
-  font-size: 1.25rem;
-  padding: 0rem 1.5rem;
-  margin: 0;
-  list-style-type: none;
-}
-
-.navbar-nav-item {
-  display: grid;
-  padding: 0.5rem;
-}
-
-#nav-toggle-label {
-  display: none;
-  cursor: pointer;
-}
-
-#nav-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-wrapper {
-    //This is the hamburger menu when revealed
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    right: 0rem;
-    text-align: center;
-    background: $gradient;
-    padding-top: calc($nav-height * 2);
-    // Hide the menu in a circle behind the nav bars
-    clip-path: circle(
-      0 at calc(100% - $nav-height / 2) calc(0% + $nav-height / 2)
-    );
-    transition: clip-path $transition-long, background $transition-long;
-  }
-
-  #nav-toggle-label {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-basis: auto;
-    width: $size;
-    height: $size;
-    margin-right: calc($nav-height / 3);
-    z-index: 2;
-  }
-
-  .bar {
-    display: inline-block;
-    height: $bar-height;
-    width: 100%;
-    background-color: $color-primary-dark;
-    transition: transform 250ms ease-out;
-  }
-
-  .bar.barChecked:nth-child(1) {
-    transform: translate(0, calc($size / 2 - $bar-height / 2)) rotate(225deg);
-  }
-
-  .bar.barChecked:nth-child(2) {
-    transform: scaleX(0);
-  }
-
-  .bar.barChecked:nth-child(3) {
-    transform: translate(0, calc(-1 * $size / 2 + $bar-height / 2))
-      rotate(135deg);
-  }
-
-  //This reveals the background
-  .nav-wrapper.navChecked {
-    clip-path: circle(150vmax at 100% 0%);
-
-    background: $gradient;
-  }
-
-  .navbar-nav {
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    grid-auto-rows: max-content;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    padding: 0;
-  }
-
-  a.navbar-nav-item {
-    place-content: flex-center;
+@media (min-width: 576px) {
+  .page-wrapper {
+    padding: 0 $xpadding;
   }
 }
+
+@import "./Styles/Navbar.scss";
+@import "./Styles/Home.scss";

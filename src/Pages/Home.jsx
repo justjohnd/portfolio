@@ -9,7 +9,7 @@ const Home = () => {
           adipisci, provident quia dicta nam voluptatem harum accusamus!
         </p>
       </div>
-      <div className="section">
+      <div id="work" className="section">
         <h2>RECENT PROJECTS</h2>
         <div className="work-wrapper">
           <div className="skills">

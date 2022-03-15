@@ -12,14 +12,14 @@ const Navbar = () => {
           <span className="logo-D">D</span>
         </div>
       </Link>
-      <input
-        type="checkbox"
-        defaultChecked={checked}
-        onChange={() => setChecked(!checked)}
+      <button
+        aria-label="Toggle navigation"
+        type="button"
+        onClick={() => setChecked(!checked)}
         className="toggle"
         id="nav-toggle"
-      />
-      <label htmlFor="nav-toggle" id="nav-toggle-label">
+      ></button>
+      <label htmlFor="nav-toggle" id="nav-toggle-label" aria-hidden="true">
         <div className={checked ? "bar checked" : "bar"}></div>
         <div className={checked ? "bar checked" : "bar"}></div>
         <div className={checked ? "bar checked" : "bar"}></div>
@@ -32,17 +32,21 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="/about">
+            <Link onClick={() => setChecked(!checked)} to="/home/#about">
               about
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="/work">
+            <Link onClick={() => setChecked(!checked)} to="/home/#work">
               work
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <a onClick={() => setChecked(!checked)} href="#">
+            <a
+              onClick={() => setChecked(!checked)}
+              download
+              href="./resume.pdf"
+            >
               resume
             </a>
           </li>

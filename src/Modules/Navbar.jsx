@@ -32,12 +32,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="/about">
+            <Link onClick={() => setChecked(!checked)} to="/home/#about">
               about
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="/work">
+            <Link onClick={() => setChecked(!checked)} to="/home/#work">
               work
             </Link>
           </li>

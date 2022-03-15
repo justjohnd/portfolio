@@ -44,8 +44,9 @@ const Navbar = () => {
           <li className="navbar-nav-item">
             <a
               onClick={() => setChecked(!checked)}
-              download
-              href="./resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://docs.google.com/document/d/e/2PACX-1vQ4dtLJ7PBbWIs6MG2fKRRdiWYvXjfTBA2KN0qcqwjcq7crQZ8DqhSIS5aD5_QPWN67_tueq6YgEft-/pub"
             >
               resume
             </a>

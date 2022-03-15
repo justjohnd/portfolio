@@ -71,6 +71,7 @@ $transition-long: 500ms ease-out;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
   grid-template-rows: 1fr;
+  align-content: center;
   gap: 0.5rem;
   font-size: 1.25rem;
   padding: 0rem 1.5rem;
@@ -119,6 +120,7 @@ $transition-long: 500ms ease-out;
     width: 100vw;
     right: 0rem;
     text-align: center;
+    display: flex;
     background: $gradient;
     padding-top: calc($nav-height * 2);
     // Hide the menu in a circle behind the nav bars

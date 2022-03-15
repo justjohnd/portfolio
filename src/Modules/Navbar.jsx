@@ -42,7 +42,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <a onClick={() => setChecked(!checked)} href="#">
+            <a
+              onClick={() => setChecked(!checked)}
+              download
+              href="./resume.pdf"
+            >
               resume
             </a>
           </li>

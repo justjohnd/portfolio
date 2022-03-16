@@ -1,4 +1,4 @@
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <div className="intro-wrapper">
@@ -42,7 +42,7 @@ const Home = () => {
               </p>
             </div>
             <div className="work-col">
-              <img src="./images/Capture.JPG"></img>
+              <img src="./images/veggit-mockup.png"></img>
             </div>
           </div>
         </div>
@@ -51,4 +51,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

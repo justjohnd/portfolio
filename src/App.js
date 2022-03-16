@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Modules/Navbar";
-import Home from "./Pages/Home";
-import Work from "./Pages/Work";
-import About from "./Pages/About";
+import HomePage from "./Pages/HomePage";
+import WorkPage from "./Pages/WorkPage";
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
   return (
@@ -10,11 +10,11 @@ function App() {
       <Navbar />
       <div className="page-wrapper">
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Home to="/" />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<HomePage to="/" />} />
         </Routes>
       </div>
     </div>

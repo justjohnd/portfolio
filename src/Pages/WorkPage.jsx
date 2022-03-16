@@ -1,4 +1,4 @@
-const Work = () => {
+const WorkPage = () => {
   return (
     <div className="work-wrapper">
       <h2>RECENT PROJECTS</h2>
@@ -6,4 +6,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default WorkPage;

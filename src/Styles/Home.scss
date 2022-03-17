@@ -13,6 +13,12 @@
   }
 }
 
+//Cards Section
+.cards-section {
+  display: flex;
+  justify-content: center;
+}
+
 //Work
 .work {
   display: flex;
@@ -24,19 +30,16 @@
 .skills li {
   font-style: italic;
   font-style: $font-secondary;
+  margin-right: 1rem;
+  display: flex;
 }
 
 .skills ul {
   display: flex;
 }
 
-.skills li {
-  margin-right: 1.5rem;
-  display: flex;
-}
-
 .skills img {
-  width: 2rem;
+  height: 2rem;
 }
 
 .work h1 {
@@ -81,8 +84,23 @@
   }
 
   .skills img {
+    height: 2.5rem;
     width: 2.5rem;
   }
+}
+
+.image-css {
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+
+.image-gulp {
+  padding-bottom: 0.4rem;
+  box-sizing: border-box;
+}
+
+.skills.work-aster {
+  margin-bottom: -0.4rem;
 }
 
 //Work Cards

@@ -13,7 +13,7 @@ h3,
 h4,
 h5 {
   font-family: "Open Sans", sans-serif;
-  color: #004469;
+  color: #1e3643;
 }
 
 ul {
@@ -56,7 +56,7 @@ a {
   color: #03a9f4;
   box-shadow: -2px 2px 8px 0px #b3e5fc;
   border-bottom: 1px solid #bdbdbd;
-  z-index: 1;
+  z-index: 100;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
@@ -68,12 +68,12 @@ a {
 }
 
 .navbar a:hover {
-  color: #004469;
+  color: #1e3643;
 }
 
 .navbar a,
 .navbar a.navbar-logo {
-  color: #004469;
+  color: #1e3643;
 }
 
 .navbar a:hover,
@@ -146,7 +146,7 @@ a {
   }
 
   .navbar a:hover {
-    color: #004469;
+    color: #1e3643;
   }
 
   .nav-wrapper {
@@ -156,9 +156,10 @@ a {
     width: 100vw;
     right: 0rem;
     text-align: center;
+    justify-content: center;
     display: flex;
     background: linear-gradient(87deg, #03a9f4, #03a9f475), linear-gradient(308deg, #0e3b50, #0e3b5000), linear-gradient(273deg, #03a9f4, #03a9f475);
-    padding-top: 6rem;
+    padding-top: 0;
     clip-path: circle(0 at calc(100% - 1.5rem) calc(0% + 1.5rem));
     transition: clip-path 500ms ease-out, background 500ms ease-out;
   }
@@ -177,7 +178,7 @@ a {
     display: inline-block;
     height: 2px;
     width: 100%;
-    background-color: #004469;
+    background-color: #1e3643;
     transition: transform 250ms ease-out;
   }
 
@@ -216,6 +217,41 @@ a {
     display: block;
   }
 }
+.card {
+  position: relative;
+  width: 30%;
+  max-height: 15rem;
+  padding: 0.5rem;
+  background: linear-gradient(94deg, #767e11, #b4b48b);
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card-name {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  color: #1e3643;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.card-name span {
+  position: absolute;
+  top: 0;
+}
+
+.card-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 100% 0 0 0;
+  box-sizing: border-box;
+}
+
 .intro-wrapper {
   margin-bottom: 7rem;
 }
@@ -229,6 +265,11 @@ a {
     width: 75%;
   }
 }
+.cards-section {
+  display: flex;
+  justify-content: center;
+}
+
 .work {
   display: flex;
   justify-content: space-between;
@@ -239,19 +280,16 @@ a {
 .skills li {
   font-style: italic;
   font-style: "Open Sans", sans-serif;
+  margin-right: 1rem;
+  display: flex;
 }
 
 .skills ul {
   display: flex;
 }
 
-.skills li {
-  margin-right: 1.5rem;
-  display: flex;
-}
-
 .skills img {
-  width: 2rem;
+  height: 2rem;
 }
 
 .work h1 {
@@ -296,9 +334,24 @@ a {
   }
 
   .skills img {
+    height: 2.5rem;
     width: 2.5rem;
   }
 }
+.image-css {
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+
+.image-gulp {
+  padding-bottom: 0.4rem;
+  box-sizing: border-box;
+}
+
+.skills.work-aster {
+  margin-bottom: -0.4rem;
+}
+
 .work-wrapper h2 {
   text-align: center;
   margin-bottom: 2rem;

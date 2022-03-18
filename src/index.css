@@ -217,32 +217,6 @@ a {
     display: block;
   }
 }
-.cards-section {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card-name {
-  position: absolute;
-  top: 0.5rem;
-  z-index: 2;
-  color: #1e3643;
-  font-weight: 500;
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
-.card-name {
-  position: absolute;
-  top: 0;
-}
-
-.small {
-  font-size: 1rem;
-  color: #fff;
-  margin-top: 0.25rem;
-}
-
 .intro-wrapper {
   margin-bottom: 7rem;
 }
@@ -254,6 +228,17 @@ a {
 @media (min-width: 768px) {
   .intro-wrapper {
     width: 75%;
+  }
+}
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .cards-section {
+    flex-wrap: nowrap;
   }
 }
 .work {

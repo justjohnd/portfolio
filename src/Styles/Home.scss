@@ -13,6 +13,19 @@
   }
 }
 
+//Cards Section
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .cards-section {
+    flex-wrap: nowrap;
+  }
+}
+
 //Work
 .work {
   display: flex;

@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [checked, setChecked] = useState(false);
 
+  const handleLink = () => {
+    setChecked(!checked);
+  };
+
   return (
     <header className="navbar">
       <Link className="navbar-logo" to="/home">
@@ -27,17 +31,17 @@ const Navbar = () => {
       <nav className={checked ? "nav-wrapper checked" : "nav-wrapper"}>
         <ul className="navbar-nav">
           <li id="home-link" className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="/home">
+            <Link onClick={handleLink} to="/home">
               home
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="/home/#about">
+            <Link onClick={handleLink} to="/home/#about">
               about
             </Link>
           </li>
           <li className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="/home/#work">
+            <Link onClick={handleLink} to="/home/#work">
               work
             </Link>
           </li>
@@ -52,7 +56,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navbar-nav-item">
-            <Link onClick={() => setChecked(!checked)} to="home/#contact">
+            <Link onClick={handleLink} to="home/#contact">
               contact
             </Link>
           </li>

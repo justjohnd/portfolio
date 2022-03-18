@@ -57,13 +57,15 @@ const Card = (props) => {
     text-align: left;
   `;
 
+  const { nickname, shortDescription, cardImage } = props.project;
+
   return (
     <Card onClick={() => props.handleCard(props.project)}>
       <CardName>
-        <div>{props.project.nickname}</div>
-        <SmallPrint>{props.project.shortDescription}</SmallPrint>
+        <div>{nickname}</div>
+        <SmallPrint>{shortDescription}</SmallPrint>
       </CardName>
-      <Image src={props.project.cardImage}></Image>
+      <Image src={cardImage}></Image>
     </Card>
   );
 };

@@ -6,17 +6,24 @@ const Cards = (props) => {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 3rem;
     @media (min-width: 768px) {
       flex-wrap: nowrap;
     } ;
   `;
 
   return (
-    <CardsSection>
-      {props.projects.map((project) => {
-        return <Card handleCard={props.handleCard} project={project} />;
-      })}
-    </CardsSection>
+    <div>
+      <div className="section-header">
+        <h2>RECENT PROJECTS</h2>
+        <hr></hr>
+      </div>
+      <CardsSection>
+        {props.projects.map((project) => {
+          return <Card handleCard={props.handleCard} project={project} />;
+        })}
+      </CardsSection>
+    </div>
   );
 };
 

@@ -10,20 +10,12 @@ const WorkSection = () => {
     setShowInfo(project);
   };
 
-  console.log(showInfo);
-
   return (
     <div>
       <div id="work" className="section">
-        <h2>RECENT PROJECTS</h2>
         <Cards projects={PROJECTS} handleCard={handleCard}></Cards>
         <div className="work-wrapper">
-          <Work
-            title={showInfo.name}
-            description={showInfo.description}
-            image={showInfo.image}
-            skills={showInfo.skills}
-          />
+          <Work showInfo={showInfo} />
         </div>
       </div>
     </div>

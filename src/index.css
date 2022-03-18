@@ -230,17 +230,6 @@ a {
     width: 75%;
   }
 }
-.cards-section {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 768px) {
-  .cards-section {
-    flex-wrap: nowrap;
-  }
-}
 .work {
   display: flex;
   justify-content: space-between;

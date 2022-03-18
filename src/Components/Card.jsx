@@ -1,16 +1,13 @@
-import { useState } from "react";
 import styled from "styled-components";
 
 const Card = (props) => {
-  const [showInfo, setShowInfo] = useState(1);
-
   const Card = styled.button`
     position: relative;
     width: 100%;
     max-height: 15rem;
     padding: 0.5rem;
     margin: 1rem 0;
-    background: ${props.cardBackground};
+    background: ${props.project.cardBackground};
     border-radius: 8px;
     display: flex;
     align-items: flex-end;
@@ -38,7 +35,7 @@ const Card = (props) => {
     object-fit: cover;
     border-radius: 100% 0 0 0;
     box-sizing: border-box;
-    object-position: ${props.id === 3 ? "35px -10px" : ""};
+    object-position: ${props.project.id === 3 ? "35px -10px" : ""};
     background-color: #000;
   `;
 
@@ -60,19 +57,13 @@ const Card = (props) => {
     text-align: left;
   `;
 
-  const handleCard = (card) => {
-    setShowInfo(card);
-  };
-
-  console.log(showInfo);
-
   return (
-    <Card onClick={() => handleCard(props.id)}>
+    <Card onClick={() => props.handleCard(props.project)}>
       <CardName>
-        <div>{props.title}</div>
-        <SmallPrint>{props.shortDescription}</SmallPrint>
+        <div>{props.project.nickname}</div>
+        <SmallPrint>{props.project.shortDescription}</SmallPrint>
       </CardName>
-      <Image src={props.image}></Image>
+      <Image src={props.project.cardImage}></Image>
     </Card>
   );
 };

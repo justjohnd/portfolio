@@ -3,16 +3,23 @@ import Card from "../Components/Card";
 import PROJECTS from "../Utilities/PROJECTS";
 
 const WorkSection = () => {
-  console.log(PROJECTS);
-
   return (
     <div>
-      <div className="cards-section">
-        <Card title="aster" image="../images/aster-card-mini.jpg" />
-        <Card title="veggit" image="../images/veggit-card-mini.png" />
-      </div>
       <div id="work" className="section">
         <h2>RECENT PROJECTS</h2>
+        <div className="cards-section">
+          {PROJECTS.map((project) => {
+            return (
+              <Card
+                id={project.id}
+                cardBackground={project.cardBackground}
+                title={project.nickname}
+                shortDescription={project.shortDescription}
+                image={project.cardImage}
+              />
+            );
+          })}
+        </div>
         <div className="work-wrapper">
           <div className="skills">
             <ul>

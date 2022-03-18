@@ -1,34 +1,27 @@
-.card {
-  position: relative;
-  width: 30%;
-  max-height: 15rem;
-  padding: 0.5rem;
-  background: linear-gradient(94deg, #767e11, #b4b48b);
-  margin: 0 0.5rem;
-  border-radius: 8px;
+
+//Cards Section
+.cards-section {
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card-name {
+  position: absolute;
+  top: 0.5rem;
+  z-index: 2;
+  color: #1e3643;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 1;
 }
 
 .card-name {
   position: absolute;
   top: 0;
-  z-index: 2;
-  color: #1e3643;
-  font-weight: 500;
-  font-size: 3rem;
-  line-height: 1;
 }
 
-.card-name span {
-  position: absolute;
-  top: 0;
-}
-
-.card-image {
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 100% 0 0 0;
-  box-sizing: border-box;
+.small {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 0.25rem;
 }

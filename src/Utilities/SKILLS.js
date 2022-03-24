@@ -34,6 +34,26 @@ const SKILLS = [
     image: "../images/svg/css.svg",
     alt: "css Icon",
   },
+  {
+    name: "wordpress",
+    image: "../images/svg/icons8-wordpress.svg",
+    alt: "wordpress Icon",
+  },
+  {
+    name: "bootstrap",
+    image: "../images/svg/icons8-bootstrap.svg",
+    alt: "bootstrap Icon",
+  },
+  {
+    name: "php",
+    image: "../images/svg/php-programming-language.svg",
+    alt: "php Icon",
+  },
+  {
+    name: "gulp",
+    image: "../images/svg/gulp-js.svg",
+    alt: "gulp JS Icon",
+  },
 ];
 
 export default SKILLS;

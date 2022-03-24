@@ -6,7 +6,11 @@ const Work = (props) => {
 
   return (
     <div>
-      <div className="skills">
+      <div
+        className={
+          props.clicked === true ? "skills fade-in" : "skills work-col"
+        }
+      >
         <ul>
           {skills.map((skill) => {
             const { image, alt } = skillDisplay(skill);
@@ -19,11 +23,15 @@ const Work = (props) => {
         </ul>
       </div>
       <div className="work">
-        <div className="work-col">
+        <div
+          className={props.clicked === true ? "work-col fade-in" : "work-col"}
+        >
           <h1>{name}</h1>
           <p>{description}</p>
         </div>
-        <div className="work-col">
+        <div
+          className={props.clicked === true ? "work-col fade-in" : "work-col"}
+        >
           <img src={image}></img>
         </div>
       </div>

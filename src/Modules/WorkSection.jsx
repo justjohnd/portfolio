@@ -5,9 +5,16 @@ import PROJECTS from "../Utilities/PROJECTS";
 
 const WorkSection = () => {
   const [showInfo, setShowInfo] = useState(PROJECTS[1]);
+  const [clicked, setClicked] = useState(false);
 
   const handleCard = (project) => {
-    setShowInfo(project);
+    if (project.id !== showInfo.id) {
+      setShowInfo(project);
+      setClicked(true);
+      setTimeout(() => {
+        setClicked(false);
+      }, 1000);
+    }
   };
 
   return (
@@ -15,7 +22,7 @@ const WorkSection = () => {
       <div id="work" className="section">
         <Cards projects={PROJECTS} handleCard={handleCard}></Cards>
         <div className="work-wrapper">
-          <Work showInfo={showInfo} />
+          <Work showInfo={showInfo} clicked={clicked} />
         </div>
       </div>
     </div>

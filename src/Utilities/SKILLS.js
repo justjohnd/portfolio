@@ -19,6 +19,21 @@ const SKILLS = [
     image: "../images/svg/icons8-mongodb.svg",
     alt: "Mongodb JS Icon",
   },
+  {
+    name: "rails",
+    image: "../images/svg/ruby-on-rails.svg",
+    alt: "Ruby on Rails Icon",
+  },
+  {
+    name: "javascript",
+    image: "../images/svg/icons8-javascript.svg",
+    alt: "Javascript Icon",
+  },
+  {
+    name: "css",
+    image: "../images/svg/css.svg",
+    alt: "css Icon",
+  },
 ];
 
 export default SKILLS;

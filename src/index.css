@@ -342,4 +342,14 @@ a {
   border: 1px solid #ffc107;
 }
 
+.icon-chevron-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#icon-chevron {
+  color: #ffc107;
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=index.css.map */

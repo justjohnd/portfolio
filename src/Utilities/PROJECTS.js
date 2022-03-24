@@ -6,7 +6,7 @@ const PROJECTS = [
     shortDescription: "restaurant",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae facilis, officiis consectetur voluptatibus blanditiis, distinctio eligendi ea quibusdam delectus optio aspernatur deserunt eveniet laudantium explicabo sed",
-    image: "../images/aster-mockup.png",
+    image: "../images/aster-mockup-mini.png",
     cardImage: "../images/aster-card-mini.jpg",
     skills: ["rails", "javascript", "css"],
     cardBackground: "linear-gradient(94deg, #767e11, #b4b48b)",

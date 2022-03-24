@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import skillDisplay from "./WorkskillDisplay";
 
 const Work = (props) => {
@@ -10,7 +11,7 @@ const Work = (props) => {
           {skills.map((skill) => {
             const { image, alt } = skillDisplay(skill);
             return (
-              <li>
+              <li key={uuidv4()}>
                 <img src={image} alt={alt} />
               </li>
             );

@@ -1,7 +1,25 @@
 import styled from "styled-components";
 
+const CardName = styled.div`
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  color: #1e3643;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-align: left;
+`;
+
+const SmallPrint = styled.div`
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 0.25rem;
+  text-align: left;
+`;
+
 const Card = (props) => {
-  const Card = styled.button`
+  const CardStyle = styled.button`
     position: relative;
     width: 100%;
     max-height: 15rem;
@@ -39,34 +57,16 @@ const Card = (props) => {
     background-color: #000;
   `;
 
-  const CardName = styled.div`
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    color: #1e3643;
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 1;
-    text-align: left;
-  `;
-
-  const SmallPrint = styled.div`
-    font-size: 1rem;
-    color: #fff;
-    margin-top: 0.25rem;
-    text-align: left;
-  `;
-
   const { nickname, shortDescription, cardImage } = props.project;
 
   return (
-    <Card onClick={() => props.handleCard(props.project)}>
+    <CardStyle onClick={() => props.handleCard(props.project)}>
       <CardName>
         <div>{nickname}</div>
         <SmallPrint>{shortDescription}</SmallPrint>
       </CardName>
       <Image src={cardImage}></Image>
-    </Card>
+    </CardStyle>
   );
 };
 

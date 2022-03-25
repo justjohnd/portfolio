@@ -87,6 +87,21 @@
   }
 }
 
+.work-links {
+  padding-left: 2.5rem;
+}
+
+.work-links a {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: $color-dark;
+  text-decoration: underline;
+}
+
+.work-links a:hover {
+  color: $text-secondary-color;
+}
+
 .image-css {
   padding: 0.4rem;
   box-sizing: border-box;

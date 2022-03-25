@@ -346,6 +346,21 @@ a {
     width: auto;
   }
 }
+.work-links {
+  padding-left: 2.5rem;
+}
+
+.work-links a {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: #212121;
+  text-decoration: underline;
+}
+
+.work-links a:hover {
+  color: #757575;
+}
+
 .image-css {
   padding: 0.4rem;
   box-sizing: border-box;

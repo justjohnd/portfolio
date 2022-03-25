@@ -74,6 +74,17 @@ a {
   margin: 0 auto;
 }
 
+//appear on load transition
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
+
 @media (min-width: 576px) {
   .page-wrapper {
     padding: 0 $xpadding;

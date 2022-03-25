@@ -1,20 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Modules/Navbar";
-import Home from "./Pages/Home";
-import Work from "./Pages/Work";
-import About from "./Pages/About";
+import HomePage from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
+import FadeWrapper from "./Utilities/FadeWrapper";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      {FadeWrapper(<Navbar />)}
       <div className="page-wrapper">
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Home to="/" />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </div>
     </div>

@@ -40,19 +40,19 @@ const SKILLS = [
     alt: "wordpress Icon",
   },
   {
+    name: "gulp",
+    image: "../images/svg/gulp.svg",
+    alt: "gulp JS Icon",
+  },
+  {
     name: "bootstrap",
     image: "../images/svg/icons8-bootstrap.svg",
     alt: "bootstrap Icon",
   },
   {
     name: "php",
-    image: "../images/svg/php-programming-language.svg",
+    image: "../images/svg/php.svg",
     alt: "php Icon",
-  },
-  {
-    name: "gulp",
-    image: "../images/svg/gulp-js.svg",
-    alt: "gulp JS Icon",
   },
 ];
 

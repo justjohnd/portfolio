@@ -32,7 +32,7 @@ const PROJECTS = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae facilis, officiis consectetur voluptatibus blanditiis, distinctio eligendi ea quibusdam delectus optio aspernatur deserunt eveniet laudantium explicabo sed",
     image: "../images/ssr-mockup-mini.png",
     cardImage: "../images/ssr-card-mini.jpg",
-    skills: ["wordpress", "php", "bootstrap", "gulp"],
+    skills: ["wordpress", "gulp", "php", "bootstrap"],
     cardBackground: "linear-gradient(94deg, #FF9000, #ffd6a0)",
   },
 ];

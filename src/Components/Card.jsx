@@ -16,8 +16,8 @@ const CardStyle = styled.button`
   transition: transform 300ms ease-in-out, box-shadow 400ms ease,
     background 100ms ease;
   &:hover {
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.25rem);
   }
   @media (min-width: 576px) {
     margin: 1rem 2rem;

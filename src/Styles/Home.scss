@@ -69,23 +69,6 @@
     width: 50%;
   }
 
-  .fade-in {
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 1s;
-  }
-
-  @keyframes fadeInOpacity {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   .work p {
     padding-left: 2.5rem;
   }
@@ -98,15 +81,14 @@
     height: 2.5rem;
     width: 2.5rem;
   }
+
+  .skills img.image-gulp {
+    width: auto;
+  }
 }
 
 .image-css {
   padding: 0.4rem;
-  box-sizing: border-box;
-}
-
-.image-gulp {
-  padding-bottom: 0.4rem;
   box-sizing: border-box;
 }
 

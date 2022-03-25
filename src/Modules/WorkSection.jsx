@@ -18,14 +18,12 @@ const WorkSection = () => {
   };
 
   return (
-    <div>
-      <div id="work" className="section">
-        <Cards projects={PROJECTS} handleCard={handleCard}></Cards>
-        <div className="work-wrapper">
-          <Work showInfo={showInfo} clicked={clicked} />
-        </div>
+    <section id="work" className="section">
+      <Cards projects={PROJECTS} handleCard={handleCard}></Cards>
+      <div className="work-wrapper">
+        <Work showInfo={showInfo} clicked={clicked} />
       </div>
-    </div>
+    </section>
   );
 };
 

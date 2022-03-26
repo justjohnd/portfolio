@@ -1,0 +1,10 @@
+//Intro
+.intro-wrapper p {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .intro-wrapper {
+    width: 75%;
+  }
+}

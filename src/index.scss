@@ -49,7 +49,7 @@ a {
   text-decoration: none;
 }
 
-.section {
+section {
   margin-bottom: $ymargin-btm;
 }
 
@@ -118,6 +118,10 @@ a {
 }
 
 @import "./Styles/Navbar.scss";
-@import "./Styles/Home.scss";
-@import "./Styles/Cards.scss";
 @import "./Styles/Footer.scss";
+
+@import "./Styles/IntroSection.scss";
+@import "./Styles/WorkSection.scss";
+@import "./Styles/ContactSection.scss";
+
+@import "./Styles/Cards.scss";

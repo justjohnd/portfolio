@@ -1,0 +1,100 @@
+//Contact
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  width: 50%;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.form-name-email {
+  display: flex;
+}
+
+.input {
+  padding: 10px 20px;
+  border: 1px solid $color-primary-dark;
+  // border-bottom: 3px solid transparent;
+  outline-width: 0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: $font-secondary;
+}
+
+.form-name-email .input:last-child {
+  margin-left: 0.5rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-bottom: 3px solid $color-secondary;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.button-submit {
+  padding: 10px 20px;
+  border: 1px solid $color-primary-dark;
+  color: $color-primary-dark;
+  background-color: $color-secondary;
+  outline-width: 0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+  font-family: $font-secondary;
+  transition: all 200ms ease-in;
+}
+
+// .button-submit:hover {
+//   background-color: $color-primary-dark;
+//   color: #fff;
+//   transition: all 200ms ease-in;
+// }
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: $color-primary-dark;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+  transform: scaleX(1);
+}

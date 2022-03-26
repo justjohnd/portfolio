@@ -1,0 +1,23 @@
+footer {
+  height: 7rem;
+  background-color: $color-primary-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.footer-wrapper img {
+  vertical-align: middle;
+}

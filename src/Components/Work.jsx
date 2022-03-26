@@ -9,10 +9,10 @@ const Work = (props) => {
       <div className="skills work-col">
         <ul>
           {skills.map((skill) => {
-            const { image, alt } = skillDisplay(skill);
+            const { image, alt, name } = skillDisplay(skill);
             return (
               <li key={uuidv4()}>
-                <img src={image} className={`image-${skill}`} alt={alt} />
+                <img src={image} className={`image-${name}`} alt={alt} />
               </li>
             );
           })}

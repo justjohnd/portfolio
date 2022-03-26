@@ -130,3 +130,40 @@
   border-radius: 1rem;
   border: 1px solid $color-secondary;
 }
+
+//Contact
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper__form {
+  width: 380px;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.form-name-email {
+  display: flex;
+}
+
+.auth-input {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background-color: $color-primary-light;
+  outline-width: 0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-bottom: 3px solid var(--color-tertiary);
+}

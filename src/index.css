@@ -84,7 +84,7 @@ section {
   opacity: 0;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .page-wrapper {
     padding: 0 5rem;
   }

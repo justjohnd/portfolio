@@ -47,6 +47,12 @@ const CardName = styled.div`
   font-size: 2.5rem;
   line-height: 1;
   text-align: left;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 992px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const SmallPrint = styled.div`

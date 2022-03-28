@@ -11,7 +11,6 @@ const CardStyle = styled.button`
   margin: 1rem 0;
   background: ${(props) => props.cardBackground};
   border-radius: 8px;
-  display: flex;
   align-items: flex-end;
   cursor: pointer;
   border-color: none;
@@ -31,6 +30,17 @@ const CardStyle = styled.button`
   } ;
 `;
 
+const Image = styled.img`
+  height: 100%;
+  object-fit: fill;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+`;
+
 const Card = (props) => {
   const { cardBackground, image, id } = props.project;
 
@@ -39,13 +49,26 @@ const Card = (props) => {
   };
 
   return (
-    <CardStyle cardBackground={cardBackground} onClick={handleCard}>
-      {props.cardDefault !== id ? (
+    <>
+      <CardStyle
+        className="d-flex d-md-none"
+        cardBackground={cardBackground}
+        onClick={handleCard}
+      >
+        {props.cardDefault !== id ? (
+          <CardDefault project={props.project}></CardDefault>
+        ) : (
+          <Image src={image}></Image>
+        )}
+      </CardStyle>
+      <CardStyle
+        className="d-none d-md-flex"
+        cardBackground={cardBackground}
+        onClick={handleCard}
+      >
         <CardDefault project={props.project}></CardDefault>
-      ) : (
-        <img className="image-mockup" src={image}></img>
-      )}
-    </CardStyle>
+      </CardStyle>
+    </>
   );
 };
 

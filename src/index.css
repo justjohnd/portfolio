@@ -497,6 +497,14 @@ footer {
   display: none;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
 @media (min-width: 576px) {
   .d-sm-none {
     display: none;
@@ -517,10 +525,6 @@ footer {
     display: none;
   }
 }
-.d-flex {
-  display: flex;
-}
-
 @media (min-width: 576px) {
   .d-sm-flex {
     display: flex;
@@ -541,10 +545,6 @@ footer {
     display: flex;
   }
 }
-.d-block {
-  display: block;
-}
-
 @media (min-width: 576px) {
   .d-sm-block {
     display: block;

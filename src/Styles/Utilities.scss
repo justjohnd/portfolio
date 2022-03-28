@@ -11,7 +11,9 @@ $breakpoints: (
   .d-#{$display} {
     display: #{$display};
   }
+}
 
+@each $display in $displayTypes {
   @each $name, $breakpoint in $breakpoints {
     @media (min-width: $breakpoint) {
       .d-#{$name}-#{$display} {

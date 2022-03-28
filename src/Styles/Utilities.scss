@@ -1,9 +1,23 @@
 //Utility Classes
 $displayTypes: (none, flex, block);
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
 
 @each $display in $displayTypes {
   .d-#{$display} {
     display: #{$display};
+  }
+
+  @each $name, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .d-#{$name}-#{$display} {
+        display: #{$display};
+      }
+    }
   }
 }
 

@@ -27,7 +27,7 @@ const WorkSection = () => {
         showWorkInfo={showWorkInfo}
         cardDefault={cardDefault}
       ></Cards>
-      <TransitionGroup className="work-wrapper">
+      <TransitionGroup className="work-wrapper d-none d-md-block">
         <CSSTransition key={showInfo.id} timeout={300} classNames="fade">
           <Work showInfo={showInfo} />
         </CSSTransition>

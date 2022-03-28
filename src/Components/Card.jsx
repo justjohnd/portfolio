@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 import CardDefault from "./CardDefault";
+import Work from "./Work";
 
 const CardStyle = styled.button`
   position: relative;
@@ -31,13 +32,14 @@ const CardStyle = styled.button`
 `;
 
 const Image = styled.img`
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
   object-fit: fill;
   margin: 0 auto;
-  padding-bottom: 1rem;
   box-sizing: border-box;
   @media (min-width: 768px) {
     width: 100%;
+    padding-bottom: 1rem;
   }
 `;
 
@@ -68,6 +70,9 @@ const Card = (props) => {
       >
         <CardDefault project={props.project}></CardDefault>
       </CardStyle>
+      <div className="d-block d-md-none ml-sm-4 mr-sm-4 mr-md-0 ml-md-0">
+        <Work showInfo={props.project}></Work>
+      </div>
     </>
   );
 };

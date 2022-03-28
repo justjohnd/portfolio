@@ -1,11 +1,32 @@
 //Utility Classes
-$displayTypes: (none, flex, block);
 $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px,
 );
+
+//Width
+$widths: (25, 50, 75, 100);
+
+@each $width in $widths {
+  .w-#{$width} {
+    width: #{$width} + "%";
+  }
+}
+
+@each $width in $widths {
+  @each $name, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      .w-#{$name}-#{$width} {
+        width: #{$width} + "%";
+      }
+    }
+  }
+}
+
+//Displays
+$displayTypes: (none, flex, block);
 
 @each $display in $displayTypes {
   .d-#{$display} {
@@ -23,98 +44,45 @@ $breakpoints: (
   }
 }
 
-$spaceAmounts: (6, 12, 16, 20, 24, 28, 36, 48, auto);
+//Margins and padding
+$sizes: (
+  0: 0,
+  1: 0.5rem,
+  2: 1rem,
+  3: 1.5rem,
+  4: 2rem,
+  auto: auto,
+);
 
-@each $space in $spaceAmounts {
-  @if $space==auto {
-    .m-#{$space} {
-      margin: #{$space};
-    }
+$spaces: (
+  ".m": margin,
+  ".ml": margin-left,
+  ".mr": margin-right,
+  ".mt": margin-top,
+  ".mb": margin-bottom,
+  ".p": padding,
+  ".pl": padding-left,
+  ".pr": padding-right,
+  ".pt": padding-top,
+  ".pb": padding-bottom,
+);
 
-    .mx-#{$space} {
-      margin-left: #{$space};
-      margin-right: #{$space};
+@each $spaceName, $space in $spaces {
+  @each $sizeName, $size in $sizes {
+    #{$spaceName}-#{$sizeName} {
+      #{$space}: #{$size};
     }
+  }
+}
 
-    .my-#{$space} {
-      margin-top: #{$space};
-      margin-bottom: #{$space};
-    }
-
-    .ml-#{$space} {
-      margin-left: #{$space};
-    }
-
-    .mr-#{$space} {
-      margin-right: #{$space};
-    }
-
-    .mb-#{$space} {
-      margin-bottom: #{$space};
-    }
-
-    .mt-#{$space} {
-      margin-top: #{$space};
-    }
-  } @else {
-    .m-#{$space} {
-      margin: #{$space}px;
-    }
-
-    .mx-#{$space} {
-      margin-left: #{$space}px;
-      margin-right: #{$space}px;
-    }
-
-    .my-#{$space} {
-      margin-top: #{$space}px;
-      margin-bottom: #{$space}px;
-    }
-
-    .ml-#{$space} {
-      margin-left: #{$space}px;
-    }
-
-    .mr-#{$space} {
-      margin-right: #{$space}px;
-    }
-
-    .mb-#{$space} {
-      margin-bottom: #{$space}px;
-    }
-
-    .mt-#{$space} {
-      margin-top: #{$space}px;
-    }
-
-    .p-#{$space} {
-      padding: #{$space}px;
-    }
-
-    .px-#{$space} {
-      padding-left: #{$space}px;
-      padding-right: #{$space}px;
-    }
-
-    .py-#{$space} {
-      padding-top: #{$space}px;
-      padding-bottom: #{$space}px;
-    }
-
-    .pl-#{$space} {
-      padding-left: #{$space}px;
-    }
-
-    .pr-#{$space} {
-      padding-right: #{$space}px;
-    }
-
-    .pb-#{$space} {
-      padding-bottom: #{$space}px;
-    }
-
-    .pt-#{$space} {
-      padding-top: #{$space}px;
+@each $spaceName, $space in $spaces {
+  @each $sizeName, $size in $sizes {
+    @each $breakName, $breakpoint in $breakpoints {
+      #{$spaceName}-#{$breakName}-#{$sizeName} {
+        @media (min-width: $breakpoint) {
+          #{$space}: #{$size};
+        }
+      }
     }
   }
 }

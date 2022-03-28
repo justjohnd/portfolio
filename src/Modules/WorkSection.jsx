@@ -6,8 +6,15 @@ import PROJECTS from "../Utilities/PROJECTS";
 
 const WorkSection = () => {
   const [showInfo, setShowInfo] = useState(PROJECTS[1]);
+  const [cardDefault, setCardDefault] = useState(0);
 
-  const handleCard = (project) => {
+  const showWorkInfo = (project) => {
+    if (cardDefault === project.id) {
+      setCardDefault(0);
+    } else {
+      setCardDefault(project.id);
+    }
+
     if (project.id !== showInfo.id) {
       setShowInfo(project);
     }
@@ -15,7 +22,11 @@ const WorkSection = () => {
 
   return (
     <section id="work">
-      <Cards projects={PROJECTS} handleCard={handleCard}></Cards>
+      <Cards
+        projects={PROJECTS}
+        showWorkInfo={showWorkInfo}
+        cardDefault={cardDefault}
+      ></Cards>
       <TransitionGroup className="work-wrapper">
         <CSSTransition key={showInfo.id} timeout={300} classNames="fade">
           <Work showInfo={showInfo} />

@@ -23,8 +23,9 @@ const Cards = (props) => {
           return (
             <Card
               key={uuidv4()}
-              handleCard={props.handleCard}
+              showWorkInfo={props.showWorkInfo}
               project={project}
+              cardDefault={props.cardDefault}
             />
           );
         })}

@@ -1,4 +1,7 @@
+import { useState } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
+import CardDefault from "./CardDefault";
 
 const CardStyle = styled.button`
   position: relative;
@@ -28,53 +31,20 @@ const CardStyle = styled.button`
   } ;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-  border-radius: 100% 0 0 0;
-  box-sizing: border-box;
-  object-position: ${(props) => (props.id === 3 ? "35px -10px" : "")};
-  background-color: #000;
-`;
-
-const CardName = styled.div`
-  position: absolute;
-  top: 0;
-  z-index: 2;
-  color: #1e3643;
-  font-weight: 500;
-  font-size: 2.5rem;
-  line-height: 1;
-  text-align: left;
-  @media (min-width: 768px) {
-    font-size: 2rem;
-  }
-  @media (min-width: 992px) {
-    font-size: 2.5rem;
-  }
-`;
-
-const SmallPrint = styled.div`
-  font-size: 1rem;
-  color: #fff;
-  margin-top: 0.25rem;
-  text-align: left;
-`;
-
 const Card = (props) => {
-  const { nickname, shortDescription, cardImage } = props.project;
+  const { cardBackground, image, id } = props.project;
+
+  const handleCard = () => {
+    props.showWorkInfo(props.project);
+  };
 
   return (
-    <CardStyle
-      cardBackground={props.project.cardBackground}
-      onClick={() => props.handleCard(props.project)}
-    >
-      <CardName>
-        <div>{nickname}</div>
-        <SmallPrint>{shortDescription}</SmallPrint>
-      </CardName>
-      <Image id={props.project.id} src={cardImage}></Image>
+    <CardStyle cardBackground={cardBackground} onClick={handleCard}>
+      {props.cardDefault !== id ? (
+        <CardDefault project={props.project}></CardDefault>
+      ) : (
+        <img className="image-mockup" src={image}></img>
+      )}
     </CardStyle>
   );
 };

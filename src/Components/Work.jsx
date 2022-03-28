@@ -32,7 +32,7 @@ const Work = (props) => {
           </div>
         </div>
         <div className="work-col">
-          <img src={image}></img>
+          <img className="image-mockup" src={image}></img>
         </div>
       </div>
     </div>

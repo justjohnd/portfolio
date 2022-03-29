@@ -63,6 +63,13 @@ const Card = (props) => {
           <Image src={image}></Image>
         )}
       </CardStyle>
+      {props.cardDefault !== id ? (
+        <div></div>
+      ) : (
+        <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
+          <Work showInfo={props.project}></Work>
+        </div>
+      )}
       <CardStyle
         className="d-none d-md-flex"
         cardBackground={cardBackground}
@@ -70,9 +77,6 @@ const Card = (props) => {
       >
         <CardDefault project={props.project}></CardDefault>
       </CardStyle>
-      <div className="d-block d-md-none mx-sm-4 mx-md-0">
-        <Work showInfo={props.project}></Work>
-      </div>
     </>
   );
 };

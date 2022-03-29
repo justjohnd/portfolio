@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 import CardDefault from "./CardDefault";
@@ -7,7 +6,6 @@ import Work from "./Work";
 const CardStyle = styled.button`
   position: relative;
   width: 100%;
-  max-height: 15rem;
   padding: 0.5rem;
   margin: 1rem 0;
   background: ${(props) => props.cardBackground};
@@ -23,12 +21,15 @@ const CardStyle = styled.button`
     transform: translateY(-0.25rem);
   }
   @media (min-width: 576px) {
-    margin: 1rem 2rem;
   }
   @media (min-width: 768px) {
     width: 32%;
     margin: 0;
-  } ;
+  }
+  @media (min-width: 992px) {
+    max-height: 15rem;
+    margin: 1rem 2rem;
+  }
 `;
 
 const Image = styled.img`
@@ -50,26 +51,35 @@ const Card = (props) => {
     props.showWorkInfo(props.project);
   };
 
+  console.log(id);
+
   return (
     <>
-      <CardStyle
-        className="d-flex d-md-none"
-        cardBackground={cardBackground}
-        onClick={handleCard}
-      >
-        {props.cardDefault !== id ? (
-          <CardDefault project={props.project}></CardDefault>
-        ) : (
-          <Image src={image}></Image>
-        )}
-      </CardStyle>
-      {props.cardDefault !== id ? (
-        <div></div>
-      ) : (
-        <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
-          <Work showInfo={props.project}></Work>
-        </div>
-      )}
+      <TransitionGroup className="work-wrapper d-block d-md-none">
+        <CSSTransition key={id} timeout={300} classNames="fade">
+          <div>
+            <CardStyle
+              className="d-flex d-md-none"
+              cardBackground={cardBackground}
+              onClick={handleCard}
+            >
+              {props.cardDefault !== id ? (
+                <CardDefault project={props.project}></CardDefault>
+              ) : (
+                <Image src={image}></Image>
+              )}
+            </CardStyle>
+            {props.cardDefault !== id ? (
+              <div></div>
+            ) : (
+              <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
+                <Work showInfo={props.project}></Work>
+              </div>
+            )}
+          </div>
+        </CSSTransition>
+      </TransitionGroup>
+
       <CardStyle
         className="d-none d-md-flex"
         cardBackground={cardBackground}

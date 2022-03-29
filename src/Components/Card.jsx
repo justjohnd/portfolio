@@ -70,7 +70,7 @@ const Card = (props) => {
       >
         <CardDefault project={props.project}></CardDefault>
       </CardStyle>
-      <div className="d-block d-md-none ml-sm-4 mr-sm-4 mr-md-0 ml-md-0">
+      <div className="d-block d-md-none mx-sm-4 mx-md-0">
         <Work showInfo={props.project}></Work>
       </div>
     </>

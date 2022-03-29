@@ -72,6 +72,26 @@ $spaces: (
     #{$spaceName}-#{$sizeName} {
       #{$space}: #{$size};
     }
+
+    .mx-#{$sizeName} {
+      margin-left: #{$size};
+      margin-right: #{$size};
+    }
+
+    .my-#{$sizeName} {
+      margin-top: #{$size};
+      margin-bottom: #{$size};
+    }
+
+    .px-#{$sizeName} {
+      padding-left: #{$size};
+      padding-right: #{$size};
+    }
+
+    .py-#{$sizeName} {
+      padding-top: #{$size};
+      padding-bottom: #{$size};
+    }
   }
 }
 
@@ -81,6 +101,34 @@ $spaces: (
       #{$spaceName}-#{$breakName}-#{$sizeName} {
         @media (min-width: $breakpoint) {
           #{$space}: #{$size};
+        }
+      }
+
+      .mx-#{$breakName}-#{$sizeName} {
+        @media (min-width: $breakpoint) {
+          margin-left: #{$size};
+          margin-right: #{$size};
+        }
+      }
+
+      .my-#{$breakName}-#{$sizeName} {
+        @media (min-width: $breakpoint) {
+          margin-top: #{$size};
+          margin-bottom: #{$size};
+        }
+      }
+
+      .px-#{$breakName}-#{$sizeName} {
+        @media (min-width: $breakpoint) {
+          padding-left: #{$size};
+          padding-right: #{$size};
+        }
+      }
+
+      .py-#{$breakName}-#{$sizeName} {
+        @media (min-width: $breakpoint) {
+          padding-top: #{$size};
+          padding-bottom: #{$size};
         }
       }
     }

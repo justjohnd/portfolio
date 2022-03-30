@@ -3,14 +3,12 @@ import styled from "styled-components";
 const Image = styled.img`
   width: 100%;
   max-height: 15rem;
+  height: 90%;
   object-fit: cover;
   border-radius: 100% 0 0 0;
   box-sizing: border-box;
   object-position: ${(props) => (props.id === 3 ? "35px -10px" : "")};
   background-color: #000;
-  @media (min-width: 992px) {
-    height: 90%;
-  }
 `;
 
 const CardName = styled.div`

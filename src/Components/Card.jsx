@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 import CardDefault from "./CardDefault";
 import Work from "./Work";
@@ -29,7 +28,6 @@ const CardStyle = styled.button`
   }
   @media (min-width: 992px) {
     max-height: 15rem;
-    margin: 1rem 2rem;
   }
 `;
 
@@ -61,34 +59,28 @@ const Card = (props) => {
     }
   };
 
-  console.log(cardDefault);
+  console.log(cardDefault, id);
 
   return (
     <>
-      <TransitionGroup className="work-wrapper d-block d-md-none">
-        <CSSTransition key={cardDefault} timeout={300} classNames="fade">
-          <div>
-            <CardStyle
-              className="d-flex d-md-none"
-              cardBackground={cardBackground}
-              onClick={handleCardMobile}
-            >
-              {cardDefault !== id ? (
-                <CardDefault project={props.project}></CardDefault>
-              ) : (
-                <Image src={image}></Image>
-              )}
-            </CardStyle>
-            {cardDefault !== id ? (
-              <div></div>
-            ) : (
-              <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
-                <Work showInfo={props.project}></Work>
-              </div>
-            )}
-          </div>
-        </CSSTransition>
-      </TransitionGroup>
+      <CardStyle
+        className="d-flex d-md-none"
+        cardBackground={cardBackground}
+        onClick={handleCardMobile}
+      >
+        {cardDefault !== id ? (
+          <CardDefault project={props.project}></CardDefault>
+        ) : (
+          <Image src={image}></Image>
+        )}
+      </CardStyle>
+      {cardDefault !== id ? (
+        <div></div>
+      ) : (
+        <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
+          <Work showInfo={props.project}></Work>
+        </div>
+      )}
 
       <CardStyle
         className="d-none d-md-flex"

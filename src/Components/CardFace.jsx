@@ -36,7 +36,7 @@ const SmallPrint = styled.div`
   text-align: left;
 `;
 
-const CardDefault = (props) => {
+const CardFace = (props) => {
   const { nickname, shortDescription, cardImage, id } = props.project;
 
   return (
@@ -50,4 +50,4 @@ const CardDefault = (props) => {
   );
 };
 
-export default CardDefault;
+export default CardFace;

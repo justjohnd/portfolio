@@ -7,20 +7,29 @@
 }
 
 .form-group {
-  width: 50%;
+  width: 100%;
   padding: 1.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   background: #fff;
 }
 
 .form-name-email {
-  display: flex;
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .form-group {
+    width: 50%;
+  }
+
+  .form-name-email {
+    display: flex;
+  }
 }
 
 .input {
   padding: 10px 20px;
   border: 1px solid $color-primary-dark;
-  // border-bottom: 3px solid transparent;
   outline-width: 0;
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -30,7 +39,13 @@
 }
 
 .form-name-email .input:last-child {
-  margin-left: 0.5rem;
+  margin-left: 0;
+}
+
+@media (min-width: 576px) {
+  .form-name-email .input:last-child {
+    margin-left: 0.5rem;
+  }
 }
 
 .form-group input:focus,
@@ -48,7 +63,7 @@
   padding: 10px 20px;
   border: 1px solid $color-primary-dark;
   color: $color-primary-dark;
-  background-color: $color-secondary;
+  background: linear-gradient(1deg, #00e2ff, #03a9f475);
   outline-width: 0;
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -56,12 +71,6 @@
   font-family: $font-secondary;
   transition: all 200ms ease-in;
 }
-
-// .button-submit:hover {
-//   background-color: $color-primary-dark;
-//   color: #fff;
-//   transition: all 200ms ease-in;
-// }
 
 /* Sweep To Right */
 .hvr-sweep-to-right {

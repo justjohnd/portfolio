@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Transition, CSSTransition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
-import CardDefault from "./CardDefault";
+import CardFace from "./CardFace";
 import Work from "./Work";
 
 const CardButton = styled.button`
@@ -33,7 +33,7 @@ const CardButton = styled.button`
   }
 `;
 
-const Image = styled.img`
+const MockupImage = styled.img`
   max-height: 100%;
   max-width: 100%;
   object-fit: fill;
@@ -46,10 +46,9 @@ const Image = styled.img`
 `;
 
 const Card = (props) => {
-  const [cardDefault, setCardDefault] = useState(0);
   const [showCardFace, setShowCardFace] = useState(true);
   const [showMockup, setShowMockup] = useState(false);
-  const { cardBackground, image, id } = props.project;
+  const { cardBackground, image } = props.project;
 
   const handleCardDesktop = () => {
     props.showWorkInfo(props.project);
@@ -57,13 +56,14 @@ const Card = (props) => {
 
   return (
     <>
+      {/* Mobile Section */}
       {showCardFace && (
         <CardButton
           className="d-flex d-md-none"
           cardBackground={cardBackground}
           onClick={() => setShowMockup(true)}
         >
-          <CardDefault project={props.project}></CardDefault>
+          <CardFace project={props.project}></CardFace>
         </CardButton>
       )}
 
@@ -81,7 +81,7 @@ const Card = (props) => {
             onClick={() => setShowMockup(false)}
             cardBackground={cardBackground}
           >
-            <Image src={image}></Image>
+            <MockupImage src={image}></MockupImage>
           </CardButton>
           <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
             <Work showInfo={props.project}></Work>
@@ -89,12 +89,13 @@ const Card = (props) => {
         </div>
       </CSSTransition>
 
+      {/* Desktop Section */}
       <CardButton
         className="d-none d-md-flex"
         cardBackground={cardBackground}
         onClick={handleCardDesktop}
       >
-        <CardDefault project={props.project}></CardDefault>
+        <CardFace project={props.project}></CardFace>
       </CardButton>
     </>
   );

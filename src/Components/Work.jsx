@@ -18,7 +18,7 @@ const Work = (props) => {
           })}
         </ul>
       </div>
-      <div className="work">
+      <div className="work mb-4 mb-md-0">
         <div className="w-md-50">
           <h1>{name}</h1>
           <p>{description}</p>

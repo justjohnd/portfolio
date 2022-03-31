@@ -21,8 +21,13 @@
   height: 2rem;
 }
 
+.image-express {
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+}
+
 .work h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   margin-top: 0;
   line-height: 1.2;
@@ -47,6 +52,7 @@
 
   .work h1 {
     line-height: normal;
+    font-size: 3rem;
   }
 
   .work p {

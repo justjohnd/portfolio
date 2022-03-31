@@ -5,6 +5,7 @@ const Image = styled.img`
   max-height: 15rem;
   height: 90%;
   object-fit: cover;
+  align-self: end;
   border-radius: 100% 0 0 0;
   box-sizing: border-box;
   object-position: ${(props) => (props.id === 3 ? "35px -10px" : "")};

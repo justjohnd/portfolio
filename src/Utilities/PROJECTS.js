@@ -7,7 +7,7 @@ const PROJECTS = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae facilis, officiis consectetur voluptatibus blanditiis, distinctio eligendi ea quibusdam delectus optio aspernatur deserunt eveniet laudantium explicabo sed",
     image: "../images/aster-mockup-mini.png",
-    cardImage: "../images/aster-card-mini.jpg",
+    cardImage: "../images/aster-card-mini.png",
     skills: ["rails", "javascript", "css"],
     cardBackground: "linear-gradient(94deg, #767e11, #b4b48b)",
     url: "https://salty-depths-22739.herokuapp.com/",

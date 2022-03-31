@@ -1,20 +1,22 @@
 import { useState } from "react";
+import { Transition, CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import CardDefault from "./CardDefault";
 import Work from "./Work";
 
-const CardStyle = styled.button`
+const CardButton = styled.button`
   position: relative;
   width: 100%;
+  height: 15rem;
   padding: 0.5rem;
   margin: 1rem 0;
   background: ${(props) => props.cardBackground};
   border-radius: 8px;
-  align-items: flex-end;
+  align-items: center;
   cursor: pointer;
   border-color: none;
   border: 0px;
-  transition: transform 300ms ease-in-out, box-shadow 400ms ease,
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease,
     background 100ms ease;
   &:hover {
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
@@ -45,50 +47,55 @@ const Image = styled.img`
 
 const Card = (props) => {
   const [cardDefault, setCardDefault] = useState(0);
+  const [showCardFace, setShowCardFace] = useState(true);
+  const [showMockup, setShowMockup] = useState(false);
   const { cardBackground, image, id } = props.project;
 
   const handleCardDesktop = () => {
     props.showWorkInfo(props.project);
   };
 
-  const handleCardMobile = () => {
-    if (cardDefault === id) {
-      setCardDefault(0);
-    } else {
-      setCardDefault(id);
-    }
-  };
-
-  console.log(cardDefault, id);
-
   return (
     <>
-      <CardStyle
-        className="d-flex d-md-none"
-        cardBackground={cardBackground}
-        onClick={handleCardMobile}
-      >
-        {cardDefault !== id ? (
+      {showCardFace && (
+        <CardButton
+          className="d-flex d-md-none"
+          cardBackground={cardBackground}
+          onClick={() => setShowMockup(true)}
+        >
           <CardDefault project={props.project}></CardDefault>
-        ) : (
-          <Image src={image}></Image>
-        )}
-      </CardStyle>
-      {cardDefault !== id ? (
-        <div></div>
-      ) : (
-        <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
-          <Work showInfo={props.project}></Work>
-        </div>
+        </CardButton>
       )}
 
-      <CardStyle
+      <CSSTransition
+        in={showMockup}
+        timeout={300}
+        classNames="fade"
+        unmountOnExit
+        onEnter={() => setShowCardFace(false)}
+        onExited={() => setShowCardFace(true)}
+      >
+        <div>
+          <CardButton
+            className="d-flex d-md-none"
+            onClick={() => setShowMockup(false)}
+            cardBackground={cardBackground}
+          >
+            <Image src={image}></Image>
+          </CardButton>
+          <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
+            <Work showInfo={props.project}></Work>
+          </div>
+        </div>
+      </CSSTransition>
+
+      <CardButton
         className="d-none d-md-flex"
         cardBackground={cardBackground}
         onClick={handleCardDesktop}
       >
         <CardDefault project={props.project}></CardDefault>
-      </CardStyle>
+      </CardButton>
     </>
   );
 };

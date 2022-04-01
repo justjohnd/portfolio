@@ -3,9 +3,10 @@ const IntroSection = () => {
     <section className="intro-wrapper">
       <h1>Hi, I'm John!</h1>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        ullam dignissimos, expedita vero repudiandae veniam ad ducimus adipisci,
-        provident quia dicta nam voluptatem harum accusamus!
+        I'm a developing <span className="bold">frontend developer</span> based
+        out of Japan. I come from a career background in engineering, teaching,
+        and professional writing. I'm still a little new around here, but I've
+        got a few ideas!
       </p>
     </section>
   );

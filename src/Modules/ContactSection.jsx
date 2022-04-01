@@ -5,8 +5,9 @@ const ContactSection = () => {
     <section id="contact">
       <SectionHeader text="CONTACT" />
       <div className="form-wrapper">
-        <form className="form-group">
+        <form name="contact" method="post" className="form-group">
           <div className="form-name-email">
+            <input type="hidden" name="form-name" value="contact" />
             <input className="input" type="text" id="name" placeholder="Name" />
             <input
               className="input"

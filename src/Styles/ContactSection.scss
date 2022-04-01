@@ -38,15 +38,15 @@
   font-family: $font-secondary;
 }
 
-.form-name-email .input:last-child {
-  margin-left: 0;
-}
+// .form-name-email .input:last-child {
+//   margin-left: 0;
+// }
 
-@media (min-width: 576px) {
-  .form-name-email .input:last-child {
-    margin-left: 0.5rem;
-  }
-}
+// @media (min-width: 576px) {
+//   .form-name-email .input:last-child {
+//     margin-left: 0.5rem;
+//   }
+// }
 
 .form-group input:focus,
 .form-group select:focus,

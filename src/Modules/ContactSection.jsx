@@ -8,9 +8,16 @@ const ContactSection = () => {
         <form name="contact" method="post" className="form-group">
           <div className="form-name-email">
             <input type="hidden" name="form-name" value="contact" />
-            <input className="input" type="text" id="name" placeholder="Name" />
             <input
               className="input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+            />
+            <input
+              className="input"
+              name="email"
               type="email"
               required
               id="email"
@@ -20,10 +27,15 @@ const ContactSection = () => {
           <input
             className="input"
             type="text"
+            name="subject"
             id="subject"
             placeholder="Subject"
           />
-          <textarea className="input" placeholder="Message"></textarea>
+          <textarea
+            className="input"
+            name="message"
+            placeholder="Message"
+          ></textarea>
           <div className="button-wrapper">
             <button className="hvr-sweep-to-right button-submit" type="submit">
               Send a message!

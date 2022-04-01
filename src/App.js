@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Modules/Navbar";
+import Footer from "./Modules/Footer";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import FadeWrapper from "./Utilities/FadeWrapper";
@@ -16,6 +17,7 @@ function App() {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </div>
+      {FadeWrapper(<Footer />)}
     </div>
   );
 }

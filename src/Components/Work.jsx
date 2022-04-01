@@ -5,21 +5,21 @@ const Work = (props) => {
   const { skills, name, description, image, url, github } = props.showInfo;
 
   return (
-    <div>
-      <div className="skills work-col">
+    <>
+      <div className="skills w-md-50">
         <ul>
           {skills.map((skill) => {
-            const { image, alt } = skillDisplay(skill);
+            const { image, alt, name } = skillDisplay(skill);
             return (
               <li key={uuidv4()}>
-                <img src={image} className={`image-${skill}`} alt={alt} />
+                <img src={image} className={`image-${name}`} alt={alt} />
               </li>
             );
           })}
         </ul>
       </div>
-      <div className="work">
-        <div className="work-col">
+      <div className="work mb-4 mb-md-0">
+        <div className="w-md-50">
           <h1>{name}</h1>
           <p>{description}</p>
           <div className="work-links">
@@ -31,11 +31,11 @@ const Work = (props) => {
             </a>
           </div>
         </div>
-        <div className="work-col">
-          <img src={image}></img>
+        <div className="w-50 d-none d-md-block">
+          <img className="image-mockup" src={image}></img>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

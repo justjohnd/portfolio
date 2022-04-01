@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import Card from "./Card";
+import SectionHeader from "./SectionHeader";
 
 const CardsSection = styled.div`
   display: flex;
@@ -16,17 +17,15 @@ const CardsSection = styled.div`
 const Cards = (props) => {
   return (
     <div>
-      <div className="section-header">
-        <h2>RECENT PROJECTS</h2>
-        <hr></hr>
-      </div>
+      <SectionHeader text="RECENT WORK" />
       <CardsSection>
         {props.projects.map((project) => {
           return (
             <Card
               key={uuidv4()}
-              handleCard={props.handleCard}
+              showWorkInfo={props.showWorkInfo}
               project={project}
+              cardDefault={props.cardDefault}
             />
           );
         })}

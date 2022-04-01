@@ -1,18 +1,3 @@
-//Intro
-.intro-wrapper {
-  margin-bottom: $ymargin-btm;
-}
-
-.intro-wrapper p {
-  font-size: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .intro-wrapper {
-    width: 75%;
-  }
-}
-
 //Work
 .work {
   display: flex;
@@ -36,8 +21,13 @@
   height: 2rem;
 }
 
+.image-express {
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+}
+
 .work h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   margin-top: 0;
   line-height: 1.2;
@@ -47,9 +37,8 @@
   font-style: $font-secondary;
 }
 
-.work img {
+.image-mockup {
   width: 100%;
-  height: 100vw;
   object-fit: fill;
   padding-bottom: 1rem;
   box-sizing: border-box;
@@ -63,18 +52,11 @@
 
   .work h1 {
     line-height: normal;
-  }
-
-  .work-col {
-    width: 50%;
+    font-size: 3rem;
   }
 
   .work p {
     padding-left: 2.5rem;
-  }
-
-  .work img {
-    height: 100%;
   }
 
   .skills img {
@@ -107,26 +89,8 @@
   box-sizing: border-box;
 }
 
-.skills.work-aster {
-  margin-bottom: -0.4rem;
-}
-
 //Work Cards
 .work-wrapper h2 {
   text-align: center;
   margin-bottom: 2rem;
-}
-
-.img-work-sm {
-  width: 30%;
-  height: 15rem;
-}
-
-.img-work-sm img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: -8px top;
-  border-radius: 1rem;
-  border: 1px solid $color-secondary;
 }

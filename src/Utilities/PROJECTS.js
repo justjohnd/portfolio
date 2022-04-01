@@ -5,9 +5,9 @@ const PROJECTS = [
     nickname: "aster",
     shortDescription: "restaurant",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae facilis, officiis consectetur voluptatibus blanditiis, distinctio eligendi ea quibusdam delectus optio aspernatur deserunt eveniet laudantium explicabo sed",
+      "Aster reste is a real restaurant (coming soon) based out of France. I used Ruby on Rails as an exercise in familiarizing myself with CRUD principles, and to quickly build a backend that allows the site owner to create and manage their own blog. Includes bilingual i18n integration.",
     image: "../images/aster-mockup-mini.png",
-    cardImage: "../images/aster-card-mini.jpg",
+    cardImage: "../images/aster-card-mini.png",
     skills: ["rails", "javascript", "css"],
     cardBackground: "linear-gradient(94deg, #767e11, #b4b48b)",
     url: "https://salty-depths-22739.herokuapp.com/",
@@ -19,7 +19,7 @@ const PROJECTS = [
     nickname: "veggit",
     shortDescription: "recipe app",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae facilis, officiis consectetur voluptatibus blanditiis, distinctio eligendi ea quibusdam delectus optio aspernatur deserunt eveniet laudantium explicabo sed",
+      "My first attempt at a MERN stack-based project, veggit is a recipe app that lets you write and edit original recipes, as well as upload recipes (via the Spoonacular API) directly from other sites. Full user authentication has been incorporated on the backend.",
     image: "../images/veggit-mockup.png",
     cardImage: "../images/veggit-card-mini.png",
     skills: ["react", "node", "mongodb", "express"],
@@ -33,7 +33,7 @@ const PROJECTS = [
     nickname: "soud street",
     shortDescription: "streaming radio",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae facilis, officiis consectetur voluptatibus blanditiis, distinctio eligendi ea quibusdam delectus optio aspernatur deserunt eveniet laudantium explicabo sed",
+      "This multilanguage site was built with an original Wordpress theme, along with Bootstrap. Sound Street Radio streams DJ shows from the UK and Japan.",
     image: "../images/ssr-mockup-mini.png",
     cardImage: "../images/ssr-card-mini.jpg",
     skills: ["wordpress", "gulp", "php", "bootstrap"],

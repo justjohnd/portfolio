@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import skillDisplay from "./WorkskillDisplay";
+import IconDisplay from "../Utilities/IconDisplay";
 
 const Work = (props) => {
   const { skills, name, description, image, url, github } = props.showInfo;
@@ -9,7 +9,7 @@ const Work = (props) => {
       <div className="skills w-md-50">
         <ul>
           {skills.map((skill) => {
-            const { image, alt, name } = skillDisplay(skill);
+            const { image, alt, name } = IconDisplay(skill);
             return (
               <li key={uuidv4()}>
                 <img src={image} className={`image-${name}`} alt={alt} />

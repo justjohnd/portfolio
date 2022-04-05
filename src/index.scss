@@ -83,8 +83,23 @@ section {
   padding: 0 $xpadding-sm;
   margin: 0 auto;
 }
-//CSS Transitions Classes
 
+//icons
+.image-express {
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+}
+
+.image-css {
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+
+.image-github {
+  width: 3rem;
+}
+
+//CSS Transitions Classes
 //appear on load transition
 .fade-appear {
   opacity: 0;

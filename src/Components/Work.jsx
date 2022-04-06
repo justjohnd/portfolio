@@ -15,7 +15,7 @@ const Work = (props) => {
   } = props.showInfo;
 
   return (
-    <>
+    <div>
       <div className="skills w-md-50">
         <ul>
           {skills.map((skill) => {
@@ -52,7 +52,7 @@ const Work = (props) => {
           ></img>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

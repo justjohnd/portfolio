@@ -48,7 +48,7 @@ const MockupImage = styled.img`
 const Card = (props) => {
   const [showCardFace, setShowCardFace] = useState(true);
   const [showMockup, setShowMockup] = useState(false);
-  const { cardBackground, image } = props.project;
+  const { cardBackground, imageSm, imageMd, imageLg, alt } = props.project;
 
   const handleCardDesktop = () => {
     props.showWorkInfo(props.project);
@@ -81,7 +81,13 @@ const Card = (props) => {
             onClick={() => setShowMockup(false)}
             cardBackground={cardBackground}
           >
-            <MockupImage src={image}></MockupImage>
+            <MockupImage
+              srcset={`${imageSm} 768w, 
+             ${imageMd} 2000w, 
+             ${imageLg} 4000w`}
+              src={imageMd}
+              alt={alt}
+            ></MockupImage>
           </CardButton>
           <div className="mobile-work-wrapper d-block d-md-none mx-sm-4 mx-md-0">
             <Work showInfo={props.project}></Work>

@@ -16,6 +16,12 @@
   margin-top: 0;
 }
 
+.about-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 @media (min-width: 576px) {
   .about-title {
     font-size: 3rem;

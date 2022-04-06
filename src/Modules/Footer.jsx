@@ -1,7 +1,7 @@
-import skillDisplay from "../Components/WorkskillDisplay";
+import IconDisplay from "../Utilities/IconDisplay";
 
 const Footer = () => {
-  const { image, alt, name } = skillDisplay("react");
+  const { image, alt, name } = IconDisplay("react");
 
   return (
     <footer>

@@ -54,6 +54,16 @@ const SKILLS = [
     image: "../images/svg/php.svg",
     alt: "php Icon",
   },
+  {
+    name: "linkedin",
+    image: "../images/svg/icons8-linkedin.svg",
+    alt: "php Icon",
+  },
+  {
+    name: "github",
+    image: "../images/svg/icons8-github.svg",
+    alt: "GitHub Icon",
+  },
 ];
 
 export default SKILLS;

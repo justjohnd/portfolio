@@ -45,7 +45,7 @@ const Navbar = () => {
               onClick={() => setChecked(!checked)}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://docs.google.com/document/d/e/2PACX-1vQ4dtLJ7PBbWIs6MG2fKRRdiWYvXjfTBA2KN0qcqwjcq7crQZ8DqhSIS5aD5_QPWN67_tueq6YgEft-/pub"
+              href="https://docs.google.com/document/d/e/2PACX-1vRBITRIIv7uee-so82XUEhLCiCDfIWOYvRumDdJgEzQt87-6iJB0zA-YDC53ziiaB6OLRKbvVgwd-Mu/pub"
             >
               resume
             </a>

@@ -37,7 +37,15 @@ const SmallPrint = styled.div`
 `;
 
 const CardFace = (props) => {
-  const { nickname, shortDescription, cardImage, id } = props.project;
+  const {
+    nickname,
+    shortDescription,
+    cardImgSm,
+    cardImgMd,
+    cardImgLg,
+    id,
+    alt,
+  } = props.project;
 
   return (
     <>
@@ -45,7 +53,14 @@ const CardFace = (props) => {
         <div>{nickname}</div>
         <SmallPrint>{shortDescription}</SmallPrint>
       </CardName>
-      <Image id={id} src={cardImage}></Image>
+      <Image
+        srcset={`${cardImgSm} 768w, 
+             ${cardImgMd} 2000w, 
+             ${cardImgLg} 4000w`}
+        id={id}
+        src={cardImgMd}
+        alt={alt}
+      ></Image>
     </>
   );
 };

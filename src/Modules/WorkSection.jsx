@@ -15,7 +15,11 @@ const WorkSection = () => {
 
   return (
     <section id="work">
-      <Cards projects={PROJECTS} showWorkInfo={showWorkInfo}></Cards>
+      <Cards
+        projects={PROJECTS}
+        showWorkInfo={showWorkInfo}
+        showInfoId={showInfo.id}
+      ></Cards>
       <TransitionGroup className="work-wrapper d-none d-md-block">
         <CSSTransition key={showInfo.id} timeout={300} classNames="fade">
           <Work showInfo={showInfo} />

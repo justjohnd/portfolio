@@ -20,9 +20,16 @@ const Cards = (props) => {
       <SectionHeader text="RECENT WORK" />
       <CardsSection>
         {props.projects.map((project) => {
+          let showCardBorder = false;
+          if (project.id === props.showInfoId) {
+            showCardBorder = true;
+          }
+          // console.log(project.id, props.showInfoId);
+
           return (
             <Card
               key={uuidv4()}
+              showCardBorder={showCardBorder}
               showWorkInfo={props.showWorkInfo}
               project={project}
               cardDefault={props.cardDefault}

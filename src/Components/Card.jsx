@@ -14,8 +14,7 @@ const CardButton = styled.button`
   border-radius: 8px;
   align-items: center;
   cursor: pointer;
-  border-color: none;
-  border: 0px;
+  border: ${(props) => (props.showCardBorder ? "3px solid #03a9f4" : "0px")};
   transition: transform 300ms ease-in-out, box-shadow 300ms ease,
     background 100ms ease;
   &:hover {
@@ -100,6 +99,7 @@ const Card = (props) => {
         className="d-none d-md-flex"
         cardBackground={cardBackground}
         onClick={handleCardDesktop}
+        showCardBorder={props.showCardBorder}
       >
         <CardFace project={props.project}></CardFace>
       </CardButton>

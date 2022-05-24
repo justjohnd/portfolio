@@ -9,9 +9,6 @@ const AboutPage = () => {
     <div>
       {FadeWrapper(
         <>
-          <div className="d-block d-sm-none">
-            <img className="about-image" src="../images/self-mini.jpg"></img>
-          </div>
           <section className="about-wrapper">
             <div className="w-100 w-sm-75 about-col-left">
               <h1 className="about-title">John Denlinger</h1>

@@ -53,7 +53,7 @@ const PROJECTS = [
     cardImgLg: "../images/ssr-mini-1300.png",
     skills: ["wordpress", "gulp", "php", "bootstrap"],
     cardBackground: "linear-gradient(94deg, #FF9000, #ffd6a0)",
-    url: "https://www.ssr990.com/",
+    url: "https://mihoskitchen.com/",
     github: "https://github.com/justjohnd/ssr990",
   },
 ];

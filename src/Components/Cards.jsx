@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
-import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
+import IconChevron from "./IconChevron";
 import Card from "./Card";
 import SectionHeader from "./SectionHeader";
 import scrollTrigger from "../Utilities/scrollTrigger.js";
@@ -21,7 +21,7 @@ const Cards = (props) => {
   useEffect(() => {
 
     scrollTrigger(".js-reveal-section", {
-      rootMargin: "-200px"
+      rootMargin: "-200px",
     });
   }, []);
 
@@ -47,8 +47,8 @@ const Cards = (props) => {
           );
         })}
       </CardsSection>
-      <div className="icon-chevron-wrapper">
-        <ExpandMoreRoundedIcon id="icon-chevron" />
+      <div className="cards-chevron">
+        <IconChevron></IconChevron>
       </div>
     </div>
   );

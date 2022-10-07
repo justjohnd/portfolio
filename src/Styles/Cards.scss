@@ -1,14 +1,3 @@
-.icon-chevron-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
-}
-
-#icon-chevron {
-  color: $color-secondary;
-  font-size: 3rem;
-}
-
 .section-cards {
   transform: translateY(200px);
   transition: transform 0.5s, opacity 1s;
@@ -19,4 +8,10 @@
 .section-cards.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.cards-chevron {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
 }

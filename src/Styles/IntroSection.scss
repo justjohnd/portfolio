@@ -3,6 +3,17 @@
   font-size: 1.25rem;
 }
 
+.intro-img {
+  display: flex;
+  justify-content: center;
+}
+
+.intro-img img {
+  width: 50%;
+  border-radius: 50%;
+  border: 3px dotted $color-secondary;
+}
+
 @media (min-width: 768px) {
   .intro-wrapper {
     height: 50vh;
@@ -18,10 +29,10 @@
 
   .intro-img {
     width: 25%;
+    display: block;
   }
 
   .intro-img img {
     width: 100%;
-    border-radius: 50%;
   }
 }

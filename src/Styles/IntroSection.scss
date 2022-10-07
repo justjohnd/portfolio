@@ -5,6 +5,23 @@
 
 @media (min-width: 768px) {
   .intro-wrapper {
+    height: 50vh;
+    display: flex;
+    flex-wrap: no-wrap;
+    column-gap: 5rem;
+    margin-bottom: 10rem;
+  }
+
+  .intro-text {
     width: 75%;
+  }
+
+  .intro-img {
+    width: 25%;
+  }
+
+  .intro-img img {
+    width: 100%;
+    border-radius: 50%;
   }
 }

@@ -1,0 +1,39 @@
+:root {
+  --trans-0: #1e3643;
+  --trans-1: #29414d;
+  --trans-2: #97a3a9;
+  --trans-3: #d8dddf;
+  --trans-4: #f9f9fa;
+  --padding-x: 1rem;
+}
+
+.color-transition {
+  margin-top: -4rem;
+}
+
+.intro-trans {
+  height: 2rem;
+  width: calc(100% + (2 * $xpadding));
+  transform: translateX(-$xpadding);
+}
+
+.intro-br-0 {
+  background: linear-gradient(var(--trans-0), var(--trans-1));
+}
+
+.intro-br-1 {
+  height: 4rem;
+  background: linear-gradient(var(--trans-1), var(--trans-2));
+}
+
+.intro-br-2 {
+  background: linear-gradient(var(--trans-2), var(--trans-3));
+}
+
+.intro-br-3 {
+  background: linear-gradient(var(--trans-3), var(--trans-4));
+}
+
+.intro-br-4 {
+  background: linear-gradient(var(--trans-4), #fff);
+}

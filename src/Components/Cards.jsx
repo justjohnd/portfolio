@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import Card from "./Card";
 import SectionHeader from "./SectionHeader";
-import "./Cards.css";
 import scrollTrigger from "../Utilities/scrollTrigger.js";
 
 const CardsSection = styled.div`

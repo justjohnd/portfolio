@@ -98,6 +98,7 @@ $transition-long: 500ms ease-out;
     justify-content: space-between;
     align-items: center;
     padding: 0 $xpadding-sm;
+    margin-bottom: $ymargin-btm-sm;
   }
 
   .navbar a {
@@ -152,8 +153,7 @@ $transition-long: 500ms ease-out;
   }
 
   .bar.checked:nth-child(3) {
-    transform: translate(0, calc(-1 * $size / 2 + $bar-height / 2))
-      rotate(135deg);
+    transform: translate(0, calc(-1 * $size / 2 + $bar-height / 2)) rotate(135deg);
   }
 
   //This reveals the background

@@ -3,12 +3,17 @@
   font-size: 1.25rem;
 }
 
-.intro-img {
+.intro-img-sm {
   display: flex;
   justify-content: center;
+  padding: 2rem 0;
 }
 
-.intro-img img {
+.intro-img-lg {
+  display: none;
+}
+
+.intro-img {
   width: 50%;
   border-radius: 50%;
   border: 3px dotted $color-secondary;
@@ -20,19 +25,22 @@
     display: flex;
     flex-wrap: no-wrap;
     column-gap: 5rem;
-    margin-bottom: 10rem;
   }
 
   .intro-text {
     width: 75%;
   }
 
-  .intro-img {
+  .intro-img-lg {
     width: 25%;
     display: block;
   }
 
-  .intro-img img {
+  .intro-img-sm {
+    display: none;
+  }
+
+  .intro-img {
     width: 100%;
   }
 }

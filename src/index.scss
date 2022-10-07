@@ -25,6 +25,7 @@ $xpadding: 5rem;
 $xpadding-sm: 1rem;
 
 $ymargin-btm: 7rem;
+$ymargin-btm-sm: 3rem;
 
 body {
   margin: 0;
@@ -54,7 +55,8 @@ a {
 }
 
 section {
-  margin-bottom: $ymargin-btm;
+  margin-bottom: $ymargin-btm-sm;
+
 }
 
 .section-header {
@@ -62,7 +64,11 @@ section {
   margin-bottom: 3rem;
 }
 
-@media (min-width) {
+@media (min-width: 768px) {
+  .section {
+    margin-bottom: $ymargin-btm;
+  }
+
   .section-header {
     margin-bottom: 5rem;
   }

@@ -8,13 +8,13 @@
 }
 
 .color-transition {
-  margin-top: -4rem;
   position: relative;
 }
 
 .color-transition-chevron {
   position: absolute;
   left: 50%;
+  top: 1rem;
   transform: translateX(-50%);
   z-index: 10;
 }

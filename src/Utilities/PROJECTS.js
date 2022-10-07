@@ -54,7 +54,7 @@ const PROJECTS = [
     skills: ["wordpress", "gulp", "php", "bootstrap"],
     cardBackground: "linear-gradient(94deg, #FF9000, #ffd6a0)",
     url: "https://mihoskitchen.com/",
-    github: "https://github.com/justjohnd/ssr990",
+    github: "https://github.com/justjohnd/wp-streaming-radio-theme",
   },
 ];
 

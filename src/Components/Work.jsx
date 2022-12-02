@@ -15,7 +15,7 @@ const Work = (props) => {
   } = props.showInfo;
 
   return (
-    <div className="js-reveal-section">
+    <div className="js-reveal-section active">
       <div className="skills w-md-50">
         <ul>
           {skills.map((skill) => {

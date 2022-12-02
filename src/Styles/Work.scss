@@ -39,6 +39,28 @@
   box-sizing: border-box;
 }
 
+.work-info,
+.skills {
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.work-info.left,
+.skills {
+  transform: translateX(calc(-100% - $xpadding));
+}
+
+.work-info.right {
+  transform: translateX(calc(100% + $xpadding));
+}
+
+.active .work-info.left,
+.active .skills,
+.active .work-info.right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 @media (min-width: 576px) {
   .work {
     gap: 3.5rem;

@@ -1,10 +1,19 @@
+import { useEffect } from "react";
 import IntroSection from "../Modules/IntroSection";
 import WorkSection from "../Modules/WorkSection";
 import ContactSection from "../Modules/ContactSection";
 import FadeWrapper from "../Utilities/FadeWrapper";
 import IconChevron from "../Components/IconChevron";
+import scrollTrigger from "../Utilities/scrollTrigger.js";
 
 const HomePage = () => {
+  useEffect(() => {
+
+    scrollTrigger(".js-reveal-section", {
+      rootMargin: "-200px",
+    });
+  }, []);
+
   return (
     <div>
       {FadeWrapper(

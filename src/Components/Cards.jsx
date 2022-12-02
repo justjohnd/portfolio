@@ -1,10 +1,8 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import IconChevron from "./IconChevron";
 import Card from "./Card";
 import SectionHeader from "./SectionHeader";
-import scrollTrigger from "../Utilities/scrollTrigger.js";
 
 const CardsSection = styled.div`
   display: flex;
@@ -17,14 +15,6 @@ const CardsSection = styled.div`
 `;
 
 const Cards = (props) => {
-
-  useEffect(() => {
-
-    scrollTrigger(".js-reveal-section", {
-      rootMargin: "-200px",
-    });
-  }, []);
-
   return (
     <div className="section-cards js-reveal-section">
       <SectionHeader text="RECENT WORK" />

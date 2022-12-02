@@ -60,7 +60,10 @@ const Card = (props) => {
         <CardButton
           className="d-flex d-md-none"
           cardBackground={cardBackground}
-          onClick={() => setShowMockup(true)}
+          onClick={() => {
+            setShowMockup(true);
+          }
+          }
         >
           <CardFace project={props.project}></CardFace>
         </CardButton>

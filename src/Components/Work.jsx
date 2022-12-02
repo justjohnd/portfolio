@@ -15,7 +15,7 @@ const Work = (props) => {
   } = props.showInfo;
 
   return (
-    <div>
+    <div className="js-reveal-section">
       <div className="skills w-md-50">
         <ul>
           {skills.map((skill) => {
@@ -29,7 +29,7 @@ const Work = (props) => {
         </ul>
       </div>
       <div className="work mb-4 mb-md-0">
-        <div className="w-md-50">
+        <div className="w-md-50 work-info left">
           <h1>{name}</h1>
           <p>{description}</p>
           <div className="work-links">
@@ -41,7 +41,7 @@ const Work = (props) => {
             </a>
           </div>
         </div>
-        <div className="w-50 d-none d-md-block">
+        <div className="w-50 work-info right d-none d-md-block">
           <img
             className="image-mockup"
             srcset={`${imageSm} 768w, 

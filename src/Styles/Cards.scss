@@ -1,10 +1,17 @@
-.icon-chevron-wrapper {
+.section-cards {
+  transform: translateY(200px);
+  transition: transform 0.5s, opacity 1s;
+  opacity: 0;
+  margin-top: -7rem;
+}
+
+.section-cards.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cards-chevron {
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
-}
-
-#icon-chevron {
-  color: $color-secondary;
-  font-size: 3rem;
 }

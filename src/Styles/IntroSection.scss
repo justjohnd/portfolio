@@ -3,8 +3,44 @@
   font-size: 1.25rem;
 }
 
+.intro-img-sm {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.intro-img-lg {
+  display: none;
+}
+
+.intro-img {
+  width: 50%;
+  border-radius: 50%;
+  border: 3px dotted $color-secondary;
+}
+
 @media (min-width: 768px) {
   .intro-wrapper {
+    height: 50vh;
+    display: flex;
+    flex-wrap: no-wrap;
+    column-gap: 5rem;
+  }
+
+  .intro-text {
     width: 75%;
+  }
+
+  .intro-img-lg {
+    width: 25%;
+    display: block;
+  }
+
+  .intro-img-sm {
+    display: none;
+  }
+
+  .intro-img {
+    width: 100%;
   }
 }

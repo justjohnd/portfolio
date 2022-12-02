@@ -25,6 +25,7 @@ $xpadding: 5rem;
 $xpadding-sm: 1rem;
 
 $ymargin-btm: 7rem;
+$ymargin-btm-sm: 3rem;
 
 body {
   margin: 0;
@@ -54,7 +55,8 @@ a {
 }
 
 section {
-  margin-bottom: $ymargin-btm;
+  margin-bottom: $ymargin-btm-sm;
+
 }
 
 .section-header {
@@ -62,7 +64,11 @@ section {
   margin-bottom: 3rem;
 }
 
-@media (min-width) {
+@media (min-width: 768px) {
+  .section {
+    margin-bottom: $ymargin-btm;
+  }
+
   .section-header {
     margin-bottom: 5rem;
   }
@@ -140,14 +146,17 @@ section {
   opacity: 0;
   transform: scale(0.9);
 }
+
 .alert-enter-active {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 300ms, transform 300ms;
 }
+
 .alert-exit {
   opacity: 1;
 }
+
 .alert-exit-active {
   opacity: 0;
   transform: scale(0.9);
@@ -163,6 +172,7 @@ section {
 @import "./Styles/Navbar.scss";
 @import "./Styles/Footer.scss";
 @import "./Styles/AboutPage.scss";
+@import "./Styles/HomePage.scss";
 
 @import "./Styles/IntroSection.scss";
 @import "./Styles/Work.scss";
@@ -170,5 +180,7 @@ section {
 
 @import "./Styles/Cards.scss";
 @import "./Styles/Card.scss";
+
+@import "./Styles/IconChevron";
 
 @import "./Styles/Utilities.scss";

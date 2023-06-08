@@ -34,7 +34,7 @@ const PROJECTS = [
     cardImgLg: "../images/veggit-mini-1300.png",
     skills: ["react", "node", "mongodb", "express"],
     cardBackground: "linear-gradient(94deg, #27c214, #b7deb3)",
-    url: "https://secret-springs-85430.herokuapp.com/",
+    url: "https://veggit.onrender.com/",
     github: "https://github.com/justjohnd/wayou-kitchen",
   },
   {

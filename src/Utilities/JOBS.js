@@ -1,0 +1,58 @@
+const JOBS = [
+  {
+    id: 1,
+    name: "Shibuya Bousai Caravan",
+    nickname: "shibuya",
+    shortDescription: "shibuya prevention awareness",
+    description:
+      "Held annaully in Tokyo, these events help teach residents about disshibuya prevention.",
+    image: "../images/shibuya-mockup-mini.png",
+    imageSm: "../images/shibuya-mockup-800.png",
+    imageMd: "../images/shibuya-mockup-1000.png",
+    imageLg: "../images/shibuya-mockup-2000.png",
+    cardImgSm: "../images/shibuya-mini-670.png",
+    cardImgMd: "../images/shibuya-mini-800.png",
+    cardImgLg: "../images/shibuya-mini-1300.png",
+    skills: ["wordpress", "javascript", "css", "html"],
+    cardBackground: "linear-gradient(94deg, #767e11, #b4b48b)",
+    url: "https://salty-depths-22739.herokuapp.com/",
+  },
+  {
+    id: 2,
+    name: "Zao Country Club",
+    nickname: "golf",
+    shortDescription: "country club homepage",
+    description:
+      "A custom theme for Mount Zao's classiest country club.",
+    image: "../images/zao-mockup.png",
+    imageSm: "../images/zao-mockup-800.png",
+    imageMd: "../images/zao-mockup-1000.png",
+    imageLg: "../images/zao-mockup-2000.png",
+    cardImgSm: "../images/zao-mini-670.png",
+    cardImgMd: "../images/zao-mini-800.png",
+    cardImgLg: "../images/zao-mini-1300.png",
+    skills: ["wordpress", "javascript", "css", "html"],
+    cardBackground: "linear-gradient(94deg, #27c214, #b7deb3)",
+    url: "http://www.zaogolf.co.jp/",
+  },
+  {
+    id: 3,
+    name: "Y Tour Seminar 2023",
+    nickname: "y tour seminar",
+    shortDescription: "tourism seminar landing page",
+    description:
+      "A simple landing page for a ",
+    image: "../images/ssr-mockup-mini.png",
+    imageSm: "../images/ssr-mockup-800.png",
+    imageMd: "../images/ssr-mockup-1000.png",
+    imageLg: "../images/ssr-mockup-2000.png",
+    cardImgSm: "../images/ssr-mini-670.png",
+    cardImgMd: "../images/ssr-mini-800.png",
+    cardImgLg: "../images/ssr-mini-1300.png",
+    skills: ["html", "css"],
+    cardBackground: "linear-gradient(94deg, #FF9000, #ffd6a0)",
+    url: "https://y-tour-seminar2023",
+  },
+];
+
+export default PROJECTS;
